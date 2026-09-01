@@ -1,0 +1,64 @@
+/*
+Theme Name: mon premier theme wp
+Author: team rocket
+Description:  Nous sommes de retour Pour vous jouer un mauvais tour. Afin de préserver le monde de la dévastation. Afin de rallier tous les peuples à notre nation. Afin d'écraser l'Amour et la Vérité. Afin d'étendre notre pouvoir jusqu'à la Voie Lactée. Jessie. James. La Team Rocket, plus rapide que la lumière. Rendez-vous tous ou ce sera la guerre. Miaouss, oui la guerre !
+Requires at least: 1.0
+Requires PHP: 7.2
+Version: 1.0
+Text Domain: dfgnsfghsf
+Tags: one-column, custom-colors, custom-menu, custom-logo, editor-style, featured-images, full-site-editing, block-patterns, rtl-language-support, sticky-post, threaded-comments, translation-ready, wide-blocks, block-styles, style-variations, accessibility-ready, blog, portfolio, news
+*/
+
+/* Variables de couleurs 
+/* 1. Déclaration des couleurs globales */
+:root {
+  --couleur-nav: #001326; /* nav et footer*/
+  --couleur-background: #f5f5f5; /* couleur de fond */
+  --couleur-bleu: #00478e; /* couleur bleu */
+  --couleur-ecriture-sombre: #001326; /* proche du noir */
+  --couleur-ecriture-claire: #f5f7fa; /* blanc */
+
+  --text-nav: 24px; /*a modifier et le mettre en rem ou em pour le responsive*/
+  --text-identification: 17px;
+  --titre-anime: 24px;
+  --soutitre-titre-anime: 16px;
+  --titre-article: 32px;
+  --paragraphe-article: 27px;
+  --titre-apropos: 45px;
+  --paragraphe-apropos: 38px;
+
+  /* --- Familles de polices réutilisables --- a jouter dans le css
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+*/
+  --font-titre-pop: "Bangers", system-ui, sans-serif; /* Style manga / Impact */
+  --font-serif: "Newsreader", Georgia, serif; /* Style éditorial / Élégant */
+  --font-sans:
+    "Roboto", Helvetica, Arial, sans-serif; /* Style moderne / Très lisible */
+}
+
+*/
+
+/* img 
+
+*/
+
+/* pictogrammes */
+/* RESEAU SOCIAUX*/
+
+/* logo 
+
+*/
+
+/* police */
+
+.bangers-regular {
+  font-family: "Bangers", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.bleu {
+color: var(--couleur-bleu);
+}
