@@ -1,11 +1,8 @@
-
-<footer>
-    <p>qkfbmkSJBMKSJDgbmkbjgksjgbkjbg</p>
-    <i class="fa-brands fa-linkedin"></i>
-    <i class="fa-brands fa-x-twitter"></i>
-    <i class="fa-brands fa-instagram"></i>
+<footer class="site-footer">
+    <p>&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?>. Tous droits réservés.</p>
 </footer>
 
-
+<?php wp_footer(); ?>
 </body>
+
 </html>

@@ -1,16 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>dfbdb</title>
-</head>
-<body>
+<html <?php language_attributes(); ?>>
 
-<nav>
-    <a href="">A</a>
-    <a href="">B</a>
-    <a href="">C</a>
-    <a href="">D</a>
-    <a href="">E</a>
-</nav>
+<head>
+    <meta charset="<?php bloginfo('charset'); ?>">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <?php wp_head(); ?>
+</head>
+
+<body <?php body_class(); ?>>
+    <?php wp_body_open(); ?>
+
+    <header class="site-header">
+        <div class="site-branding">
+            <a href="<?php echo esc_url(home_url('/')); ?>">
+                <?php bloginfo('name'); ?>
+            </a>
+        </div>
+
+        <nav class="main-navigation">
+            <?php
+            wp_nav_menu(array(
+                'theme_location' => 'main-menu',
+                'fallback_cb'    => false,
+            ));
+            ?>
+        </nav>
+    </header>

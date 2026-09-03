@@ -1,15 +1,18 @@
 <?php get_header(); ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <p class="bleu">test</p>
-</body>
-</html>
+<main class="site-main">
+    <?php
+    if (have_posts()) :
+        while (have_posts()) : the_post(); ?>
+            <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+                <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+                <div><?php the_excerpt(); ?></div>
+            </article>
+    <?php endwhile;
+    else :
+        echo '<p>Aucun contenu trouvé.</p>';
+    endif;
+    ?>
+</main>
 
 <?php get_footer(); ?>
