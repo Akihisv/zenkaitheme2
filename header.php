@@ -1,16 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <?php wp_head(); ?>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>dfbdb</title>
+    <title>Zenkai Sport</title>
 </head>
 <body>
 
-<nav>
-    <a href="">A</a>
-    <a href="">B</a>
-    <a href="">C</a>
-    <a href="">D</a>
-    <a href="">E</a>
-</nav>
+<header>
+    <nav>
+        <img src="/home/etapweb/code/ZenkaiSport/wp-content/themes/zenkaitheme2/assets/logo/Logo_Mobile.svg" alt="Logo du site Zenkai Sport">
+        <ul>
+            <li><a href="">A</a></li>
+            <li><a href="">B</a></li>
+            <li><a href="">C</a></li>
+        </ul>
+    </nav>
+</header>

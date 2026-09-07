@@ -8,7 +8,7 @@ Template Name: About Page
 
 <main>
     
-    <p>Popo</p>
+    <h1>A propos</p>
 </main>
 
 <?php get_footer(); ?>
