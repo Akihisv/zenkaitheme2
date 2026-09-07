@@ -10,19 +10,7 @@
 <body <?php body_class(); ?>>
     <?php wp_body_open(); ?>
 
-    <header class="site-header">
-        <div class="site-branding">
-            <a href="<?php echo esc_url(home_url('/')); ?>">
-                <?php bloginfo('name'); ?>
-            </a>
-        </div>
-
-        <nav class="main-navigation">
-            <?php
-            wp_nav_menu(array(
-                'theme_location' => 'main-menu',
-                'fallback_cb'    => false,
-            ));
-            ?>
+    <header>
+        <nav>
         </nav>
     </header>

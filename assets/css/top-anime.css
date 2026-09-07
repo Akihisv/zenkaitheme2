@@ -1,0 +1,49 @@
+.top-anime {
+  padding-inline: var(--space-sm);
+  padding-block-end: var(--space-xl);
+  background-color: var(--couleur-background);
+}
+ 
+.top-anime__title {
+  margin-block-end: var(--space-sm);
+  font-family: var(--font-titre-pop);
+  font-size: var(--titre-anime);
+  color: var(--couleur-noir);
+}
+
+.top-anime__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-xs);
+  list-style: none;
+}
+ 
+.top-anime__cover {
+  display: block;
+  width: 100%;
+  aspect-ratio: 2 / 3; /* ratio jaquette standard, à ajuster si besoin */
+  object-fit: cover;
+  border-radius: var(--radius-jaquette);
+  background-color: var(--couleur-ecriture-sombre); /* évite un flash blanc au chargement */
+}
+ 
+.top-anime__more {
+  display: block;
+  margin-block-start: var(--space-sm);
+  text-align: right;
+  font-family: var(--font-sans);
+  font-size: var(--text-voir-plus);
+  color: var(--couleur-texte-secondaire);
+  text-decoration: none;
+}
+ 
+.top-anime__more:hover,
+.top-anime__more:focus-visible {
+  text-decoration: underline;
+}
+ 
+/* Focus clavier visible — accessibilité */
+.top-anime__more:focus-visible {
+  outline: 2px solid var(--couleur-bleu);
+  outline-offset: 2px;
+}
