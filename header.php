@@ -9,12 +9,21 @@
 <body>
 
 <header>
+    <div class="header_container">
+        <a class="logo_desk" href="/">
+            <img  src=<?php echo get_template_directory_uri() . '/assets/logo/Logo_Desktop.svg' ; ?>
+            alt="Logo du site Zenkai Sport">
+        </a>
+        <a class="logo_mobile" href="/">
+            <img  src=<?php echo get_template_directory_uri() . '/assets/logo/Logo_Mobile.svg' ; ?>
+            alt="Logo du site Zenkai Sport">
+        </a>
     <nav>
-        <img src="/home/etapweb/code/ZenkaiSport/wp-content/themes/zenkaitheme2/assets/logo/Logo_Mobile.svg" alt="Logo du site Zenkai Sport">
-        <ul>
-            <li><a href="">A</a></li>
-            <li><a href="">B</a></li>
-            <li><a href="">C</a></li>
+        <ul class="nav_list">
+            <li><a href="">Articles</a></li>
+            <li><a href="">Classement</a></li>
+            <li><a href="/about">A propos</a></li>
         </ul>
     </nav>
+    </div>
 </header>

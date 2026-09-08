@@ -1,6 +1,6 @@
 
 <footer>
-    <p>qkfbmkSJBMKSJDgbmkbjgksjgbkjbg</p>
+    <p>FOOTER</p>
     <i class="fa-brands fa-linkedin"></i>
     <i class="fa-brands fa-x-twitter"></i>
     <i class="fa-brands fa-instagram"></i>
