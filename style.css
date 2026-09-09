@@ -91,3 +91,11 @@ color: var(--couleur-bleu);
     margin: 0 auto;
     padding: 20px;
 }
+
+section {
+  background-image: url("../zenkaitheme2/assets/images/Background_mobile6.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}

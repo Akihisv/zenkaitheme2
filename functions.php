@@ -12,6 +12,7 @@ function mon_theme_setup()
 }
 add_action('after_setup_theme', 'mon_theme_setup');
 
+
 function mon_theme_scripts()
 {
     wp_enqueue_style('mon-theme-style', get_stylesheet_uri(), array(), '1.0.0');
@@ -46,6 +47,14 @@ function mon_theme_scripts()
             get_template_directory_uri() . '/assets/css/top-anime.css',
             array('zenkai-style'),
             '1.0.0'
+        );
+
+        wp_enqueue_script(
+            'zenkai-news-carousel',
+            get_template_directory_uri() . '/assets/js/news-carousel.js',
+            array(),
+            '1.0.0',
+            true
         );
     }
 }

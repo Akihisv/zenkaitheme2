@@ -3,7 +3,7 @@
   padding-block-end: var(--space-xl);
   background-color: var(--couleur-background);
 }
- 
+
 .top-anime__title {
   margin-block-end: var(--space-sm);
   font-family: var(--font-titre-pop);
@@ -17,31 +17,59 @@
   gap: var(--space-xs);
   list-style: none;
 }
- 
+
 .top-anime__cover {
   display: block;
   width: 100%;
-  aspect-ratio: 2 / 3; /* ratio jaquette standard, à ajuster si besoin */
+  aspect-ratio: 2 / 3;
   object-fit: cover;
-  border-radius: var(--radius-jaquette);
   background-color: var(--couleur-ecriture-sombre); /* évite un flash blanc au chargement */
 }
- 
+
+.top-anime__grid a {
+  display: block;
+  overflow: hidden;
+  -webkit-tap-highlight-color: transparent;
+  border: 2px solid var(--couleur-noir);
+  border-radius: var(--radius-carte-news);
+}
+
+.top-anime__grid a:active {
+  transform: scale(0.97);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .top-anime__cover {
+    transition: transform 0.25s ease;
+  }
+
+  .top-anime__grid a:hover .top-anime__cover {
+    transform: scale(1.05);
+  }
+}
+
+/* Focus clavier visible sur le lien */
+.top-anime__grid a:focus-visible {
+  outline: 2px solid var(--couleur-bleu);
+  outline-offset: 2px;
+  border-radius: var(--radius-jaquette);
+}
+
 .top-anime__more {
   display: block;
   margin-block-start: var(--space-sm);
   text-align: right;
   font-family: var(--font-sans);
   font-size: var(--text-voir-plus);
-  color: var(--couleur-texte-secondaire);
+  color: var(--couleur-background);
   text-decoration: none;
 }
- 
+
 .top-anime__more:hover,
 .top-anime__more:focus-visible {
   text-decoration: underline;
 }
- 
+
 /* Focus clavier visible — accessibilité */
 .top-anime__more:focus-visible {
   outline: 2px solid var(--couleur-bleu);
