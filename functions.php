@@ -30,7 +30,4 @@ add_action('wp_enqueue_scripts', function () {
         array(),
         filemtime(get_stylesheet_directory() . '/assets/js/index.js')
     );
-
-    
-
 });
