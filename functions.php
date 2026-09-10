@@ -9,6 +9,10 @@ add_action('wp_enqueue_scripts', function () {
     );
 
     wp_enqueue_style(
+        'footer-style',
+        get_template_directory_uri() . '/assets/css/footer.css',
+        array('theme-style'),
+        filemtime(get_stylesheet_directory() . '/assets/css/footer.css')
         'header-style',
         get_template_directory_uri() . '/assets/css/header.css',
         array('theme-style'),
