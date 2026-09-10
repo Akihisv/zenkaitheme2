@@ -56,6 +56,13 @@ function mon_theme_scripts()
             '1.0.0',
             true
         );
+
+        wp_enqueue_style(
+            'zenkai-cta-newsletter',
+            get_template_directory_uri() . '/assets/css/cta-newsletter.css',
+            array('zenkai-style'),
+            '1.0.0'
+        );
     }
 }
 add_action('wp_enqueue_scripts', 'mon_theme_scripts');

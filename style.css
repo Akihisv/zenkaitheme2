@@ -23,8 +23,7 @@ Tags: one-column, custom-colors, custom-menu, custom-logo, editor-style, feature
   --couleur-bleu: #00478e; /* couleur bleu */
   --couleur-ecriture-sombre: #001326; /* proche du noir */
   --couleur-ecriture-claire: #f5f7fa; /* blanc */
-  --couleur-texte-secondaire: #4b4b4b;
-  --couleur-noir: #000000; 
+  --couleur-texte-secondaire: #4b4b4b; /* ex: Voir plus */
 
   --text-nav: 1.5rem; /*a modifier et le mettre en rem ou em pour le responsive*/
   --text-identification: 1.0625rem;
@@ -34,10 +33,10 @@ Tags: one-column, custom-colors, custom-menu, custom-logo, editor-style, feature
   --paragraphe-article: 1.6675rem;
   --titre-apropos: 2.815rem;
   --paragraphe-apropos: 2.375rem;
-  --text-voir-plus: 0.875rem;
+  --text-voir-plus: 1rem;
 
-  /* -------------------- Espacements --------------------
-     Échelle basée sur 8px pour garder des espacements cohérents entre les sections*/
+/* -------------------- Espacements --------------------
+  Échelle basée sur 8px pour garder des espacements cohérents entre les sections*/
   --space-xs: 0.5rem;   /* 8px */
   --space-sm: 1rem;     /* 16px */
   --space-md: 1.5rem;   /* 24px */
@@ -51,16 +50,30 @@ Tags: one-column, custom-colors, custom-menu, custom-logo, editor-style, feature
 
 
 
-  /* --- Familles de polices réutilisables --- a jouter dans le css
+/* --- Familles de polices réutilisables --- a jouter dans le css
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 */
   --font-titre-pop: "Bangers", system-ui, sans-serif; /* Style manga / Impact */
   --font-serif: "Newsreader", Georgia, serif; /* Style éditorial / Élégant */
   --font-sans:
     "Roboto", Helvetica, Arial, sans-serif; /* Style moderne / Très lisible */
 
+
+/* Utilitaire : cache visuellement un élément tout en le gardant accessible
+   aux lecteurs d'écran (ex: label de formulaire redondant avec le placeholder) */
+  .visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
 
 /* img 
 
@@ -92,10 +105,10 @@ color: var(--couleur-bleu);
     padding: 20px;
 }
 
-section {
-  background-image: url("../zenkaitheme2/assets/images/Background_mobile6.jpg");
+/*.news-carousel, .top-anime {
+  background-image: url("../zenkaitheme2/assets/images/Background_mobile7.avif");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-}
+}*/

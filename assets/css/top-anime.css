@@ -2,20 +2,27 @@
   padding-inline: var(--space-sm);
   padding-block-end: var(--space-xl);
   background-color: var(--couleur-background);
+  padding: 1rem;
 }
 
 .top-anime__title {
   margin-block-end: var(--space-sm);
   font-family: var(--font-titre-pop);
   font-size: var(--titre-anime);
-  color: var(--couleur-noir);
+  color: var(--couleur-ecriture-sombre);
 }
 
 .top-anime__grid {
+  --topanime-largeur: 100%;
+
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: var(--space-xs);
   list-style: none;
+}
+
+.top-anime__grid li:nth-child(n + 5) {
+  display: none;
 }
 
 .top-anime__cover {
@@ -30,7 +37,7 @@
   display: block;
   overflow: hidden;
   -webkit-tap-highlight-color: transparent;
-  border: 2px solid var(--couleur-noir);
+  border: 2px solid var(--couleur-ecriture-sombre);
   border-radius: var(--radius-carte-news);
 }
 
@@ -52,7 +59,35 @@
 .top-anime__grid a:focus-visible {
   outline: 2px solid var(--couleur-bleu);
   outline-offset: 2px;
-  border-radius: var(--radius-jaquette);
+  border-radius: var(--radius-topanime);
+}
+
+@media (min-width: 64rem) { /* 1024px - Desktop*/
+  .top-anime__grid {
+    display: flex;
+    overflow-x: auto;
+    gap: var(--space-md);
+    scrollbar-width: none;
+  }
+ 
+  .top-anime__grid::-webkit-scrollbar {
+    display: none;
+  }
+ 
+  /* La 5ème jaquette redevient visible, et déborde partiellement du bord
+     de la page grâce à overflow-x: auto ci-dessus. */
+  .top-anime__grid li:nth-child(n + 5) {
+    display: block;
+  }
+ 
+  .top-anime__grid li {
+    flex: 0 0 16.8856rem; /* 270.17px */
+  }
+ 
+  .top-anime__cover {
+    aspect-ratio: auto; /* on fixe une hauteur exacte à la place du ratio */
+    height: 22rem; /* 352px */
+  }
 }
 
 .top-anime__more {
@@ -61,7 +96,8 @@
   text-align: right;
   font-family: var(--font-sans);
   font-size: var(--text-voir-plus);
-  color: var(--couleur-background);
+  font-weight: bold;
+  color: var(--couleur-ecriture-sombre);
   text-decoration: none;
 }
 

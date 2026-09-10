@@ -86,6 +86,25 @@ Template Name: Accueil
             </div>
         </section>
 
+        <section class="cta-newsletter">
+            <div class="cta-newsletter__text">
+                <h2 class="cta-newsletter__title">NE RATE AUCUNE SORTIE</h2>
+                <p class="cta-newsletter__subtitle">Reçois les nouveautés animes directement dans ta boîte mail.</p>
+            </div>
+
+            <form class="cta-newsletter__form" action="#" method="post">
+                <label for="newsletter-email" class="visually-hidden">Ton adresse email</label>
+                <input
+                    type="email"
+                    id="newsletter-email"
+                    name="newsletter-email"
+                    class="cta-newsletter__input"
+                    placeholder="Ton adresse email"
+                    required>
+                <button type="submit" class="cta-newsletter__button">S'abonner</button>
+            </form>
+        </section>
+
         <section class="top-anime" aria-labelledby="top-anime-title">
             <h2 id="top-anime-title" class="top-anime__title">TOP ANIME</h2>
 
@@ -128,6 +147,17 @@ Template Name: Accueil
                         <img
                             class="top-anime__cover"
                             src=<?php echo get_template_directory_uri() . '/assets/images/Kuroko_no_basket.jpg'; ?>
+                            alt="Blue Lock"
+                            width="200"
+                            height="300"
+                            loading="lazy">
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img
+                            class="top-anime__cover"
+                            src=<?php echo get_template_directory_uri() . '/assets/images/InitialD.jpg'; ?>
                             alt="Blue Lock"
                             width="200"
                             height="300"

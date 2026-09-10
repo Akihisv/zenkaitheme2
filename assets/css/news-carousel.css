@@ -5,6 +5,17 @@
   background-color: var(--couleur-background);
 }
 
+@media (min-width: 64rem) { /* 1024px - Desktop */
+  .news-carousel {
+    --carte-largeur: 16.2675rem; /* 260.28px */
+    --carte-hauteur: 22.685rem;  /* 362.96px */
+  }
+ 
+  .news-carousel__track {
+    gap: var(--space-md); /* gap non précisé par le design, valeur cohérente avec l'échelle */
+  }
+}
+
 .news-carousel__track {
   display: flex;
   gap: var(--space-sm);
@@ -39,7 +50,7 @@
   border-radius: var(--radius-carte-news);
   overflow: hidden;
   background-color: var(--couleur-nav); /* évite un flash blanc pendant le chargement */
-  border: 1px solid var(--couleur-noir);
+  border: 1px solid var(--couleur-ecriture-sombre);
   box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.15);
   -webkit-tap-highlight-color: transparent; /* évite le flash bleu natif au tap sur mobile */
 
