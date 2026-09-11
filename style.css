@@ -9,10 +9,22 @@ Text Domain: dfgnsfghsf
 Tags: one-column, custom-colors, custom-menu, custom-logo, editor-style, featured-images, full-site-editing, block-patterns, rtl-language-support, sticky-post, threaded-comments, translation-ready, wide-blocks, block-styles, style-variations, accessibility-ready, blog, portfolio, news
 */
 
+/* RESET */
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+li {
+  list-style-type: none;
+}
+ul {
+  list-style: none;
 }
 
 /* Variables de couleurs 
@@ -35,22 +47,20 @@ Tags: one-column, custom-colors, custom-menu, custom-logo, editor-style, feature
   --paragraphe-apropos: 2.375rem;
   --text-voir-plus: 1rem;
 
-/* -------------------- Espacements --------------------
+  /* -------------------- Espacements --------------------
   Échelle basée sur 8px pour garder des espacements cohérents entre les sections*/
-  --space-xs: 0.5rem;   /* 8px */
-  --space-sm: 1rem;     /* 16px */
-  --space-md: 1.5rem;   /* 24px */
-  --space-lg: 2rem;     /* 32px */
-  --space-xl: 3rem;     /* 48px */
+  --space-xs: 0.5rem; /* 8px */
+  --space-sm: 1rem; /* 16px */
+  --space-md: 1.5rem; /* 24px */
+  --space-lg: 2rem; /* 32px */
+  --space-xl: 3rem; /* 48px */
 
-/* -------------------- Radius (border) -------------------- */
-  --radius-carte-news: 1rem;    /* 16px, carte du carrousel */
-  --radius-topanime: 0.5rem;    /* 8px, Top Anime */
-  --radius-badge: 0.5rem;       /* 8px, badge "TITRE : NEWS" */
+  /* -------------------- Radius (border) -------------------- */
+  --radius-carte-news: 1rem; /* 16px, carte du carrousel */
+  --radius-topanime: 0.5rem; /* 8px, Top Anime */
+  --radius-badge: 0.5rem; /* 8px, badge "TITRE : NEWS" */
 
-
-
-/* --- Familles de polices réutilisables --- a jouter dans le css
+  /* --- Familles de polices réutilisables --- a jouter dans le css
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -60,33 +70,32 @@ Tags: one-column, custom-colors, custom-menu, custom-logo, editor-style, feature
   --font-sans:
     "Roboto", Helvetica, Arial, sans-serif; /* Style moderne / Très lisible */
 
-
-/* Utilitaire : cache visuellement un élément tout en le gardant accessible
+  /* Utilitaire : cache visuellement un élément tout en le gardant accessible
    aux lecteurs d'écran (ex: label de formulaire redondant avec le placeholder) */
   .visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
-}
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
 
-/* img 
-
-*/
-
-/* pictogrammes */
-/* RESEAU SOCIAUX*/
-
-/* logo 
+  /* img 
 
 */
 
-/* police */
+  /* pictogrammes */
+  /* RESEAU SOCIAUX*/
+
+  /* logo 
+
+*/
+
+  /* police */
 }
 
 .bangers-regular {
@@ -96,13 +105,13 @@ Tags: one-column, custom-colors, custom-menu, custom-logo, editor-style, feature
 }
 
 .bleu {
-color: var(--couleur-bleu);
+  color: var(--couleur-bleu);
 }
 
 .site-main {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
 /*.news-carousel, .top-anime {

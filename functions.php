@@ -63,6 +63,36 @@ function mon_theme_scripts()
             array('zenkai-style'),
             '1.0.0'
         );
+        wp_enqueue_style(
+            'header-style',
+            get_template_directory_uri() . '/assets/css/header.css',
+            array('theme-style'),
+            filemtime(get_stylesheet_directory() . '/assets/css/header.css')
+        );
+
+        wp_enqueue_style(
+            'footer-style',
+            get_template_directory_uri() . '/assets/css/footer.css',
+            array('theme-style'),
+            filemtime(get_stylesheet_directory() . '/assets/css/footer.css')
+
+        );
+        
+
+        wp_enqueue_style(
+            'about-style',
+            get_template_directory_uri() . '/assets/css/about.css',
+            array('theme-style'),
+            filemtime(get_stylesheet_directory() . '/assets/css/about.css')
+        );
+
+
+        //  JAVASCRIPT
+        wp_enqueue_script(
+            'index-js',
+            get_template_directory_uri() . '/assets/js/index.js',
+            array(),
+            filemtime(get_stylesheet_directory() . '/assets/js/index.js')
+        );
     }
 }
-add_action('wp_enqueue_scripts', 'mon_theme_scripts');
