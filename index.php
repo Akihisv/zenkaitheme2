@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
+<main class="site-main">
 
-
-    <p>test</p>
+</main>
 
 <?php get_footer(); ?>

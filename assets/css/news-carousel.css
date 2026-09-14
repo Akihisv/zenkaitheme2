@@ -1,0 +1,156 @@
+.news-carousel {
+  --carte-largeur: 15.8125rem; /* 253px */
+  --carte-hauteur: 22.3125rem;  /* 357px */
+  padding-block: var(--space-xl) var(--space-lg);
+  background-color: var(--couleur-background);
+}
+
+@media (min-width: 64rem) { /* 1024px - Desktop */
+  .news-carousel {
+    --carte-largeur: 16.2675rem; /* 260.28px */
+    --carte-hauteur: 22.685rem;  /* 362.96px */
+  }
+ 
+  .news-carousel__track {
+    gap: var(--space-md); /* gap non précisé par le design, valeur cohérente avec l'échelle */
+  }
+}
+
+.news-carousel__track {
+  display: flex;
+  gap: var(--space-sm);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  /* padding latéral = espace nécessaire pour que la 1ère/dernière carte
+     puisse arriver centrée à l'écran (effet "peek" des cartes voisines) */
+  padding-inline: calc((100vw - var(--carte-largeur)) / 2);
+  list-style: none;
+}
+
+ 
+/* Masquer la scrollbar (le scroll tactile reste fonctionnel) */
+.news-carousel__track {
+  scrollbar-width: none;
+}
+.news-carousel__track::-webkit-scrollbar {
+  display: none;
+}
+ 
+.news-carousel__item {
+  flex: 0 0 var(--carte-largeur);
+  scroll-snap-align: center;
+}
+ 
+.news-carousel__card {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: var(--carte-hauteur);
+  border-radius: var(--radius-carte-news);
+  overflow: hidden;
+  background-color: var(--couleur-nav); /* évite un flash blanc pendant le chargement */
+  border: 1px solid var(--couleur-ecriture-sombre);
+  box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.15);
+  -webkit-tap-highlight-color: transparent; /* évite le flash bleu natif au tap sur mobile */
+
+}
+
+/* Retour tactile immédiat au tap/clic */
+.news-carousel__card:active {
+  transform: scale(0.97);
+}
+
+.news-carousel__card:focus-visible {
+  outline: 2px solid var(--couleur-bleu);
+  outline-offset: -2px;
+}
+
+
+@media (prefers-reduced-motion: no-preference) {
+  .news-carousel__track {
+    scroll-behavior: smooth;
+  }
+}
+
+.news-carousel__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .news-carousel__image {
+    transition: transform 0.25s ease;
+  }
+ 
+  .news-carousel__card:hover .news-carousel__image {
+    transform: scale(1.05);
+  }
+}
+
+ 
+/* Badge "TITRE : NEWS" — bulle façon BD, positionnée en bas à gauche
+   de la carte, par-dessus l'image . */
+.news-carousel__badge {
+  position: absolute;
+  left: var(--space-sm);
+  bottom: var(--space-md);
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  background-color: var(--couleur-bleu);
+  color: var(--couleur-ecriture-claire);
+  font-family: var(--font-titre-pop);
+  font-size: var(--titre-anime);
+  line-height: 1.3;
+  border-radius: var(--radius-badge);
+}
+ 
+/* Pointe de la bulle, en bas à gauche du badge */
+.news-carousel__badge::after {
+  content: "";
+  position: absolute;
+  left: 0.75rem;
+  bottom: -0.375rem;
+  width: 0;
+  height: 0;
+  border-left: 0.375rem solid transparent;
+  border-right: 0.375rem solid transparent;
+  border-top: 0.5rem solid var(--couleur-bleu);
+}
+
+/* Points de navigation sous le carrousel */
+.news-carousel__dots {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-xs);
+  margin-block-start: var(--space-md);
+}
+ 
+.news-carousel__dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background-color: var(--couleur-ecriture-sombre);
+  opacity: 0.3;
+  cursor: pointer;
+}
+ 
+.news-carousel__dot.is-active {
+  opacity: 1;
+  background-color: var(--couleur-bleu);
+}
+ 
+@media (prefers-reduced-motion: no-preference) {
+  .news-carousel__dot {
+    transition: opacity 0.2s ease, background-color 0.2s ease;
+  }
+}
+ 
+.news-carousel__dot:focus-visible {
+  outline: 2px solid var(--couleur-bleu);
+  outline-offset: 2px;
+}

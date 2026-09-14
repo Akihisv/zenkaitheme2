@@ -35,41 +35,68 @@ ul {
   --couleur-bleu: #00478e; /* couleur bleu */
   --couleur-ecriture-sombre: #001326; /* proche du noir */
   --couleur-ecriture-claire: #f5f7fa; /* blanc */
+  --couleur-texte-secondaire: #4b4b4b; /* ex: Voir plus */
 
-  --text-nav: 24px; /*a modifier et le mettre en rem ou em pour le responsive*/
-  --text-identification: 17px;
-  --titre-anime: 24px;
-  --soutitre-titre-anime: 16px;
-  --titre-article: 32px;
-  --paragraphe-article: 27px;
-  --titre-apropos: 45px;
-  --paragraphe-apropos: 38px;
+  --text-nav: 1.5rem; /*a modifier et le mettre en rem ou em pour le responsive*/
+  --text-identification: 1.0625rem;
+  --titre-anime: 1.25rem;
+  --soutitre-titre-anime: 1rem;
+  --titre-article: 2rem;
+  --paragraphe-article: 1.6675rem;
+  --titre-apropos: 2.815rem;
+  --paragraphe-apropos: 2.375rem;
+  --text-voir-plus: 1rem;
+
+  /* -------------------- Espacements --------------------
+  Échelle basée sur 8px pour garder des espacements cohérents entre les sections*/
+  --space-xs: 0.5rem; /* 8px */
+  --space-sm: 1rem; /* 16px */
+  --space-md: 1.5rem; /* 24px */
+  --space-lg: 2rem; /* 32px */
+  --space-xl: 3rem; /* 48px */
+
+  /* -------------------- Radius (border) -------------------- */
+  --radius-carte-news: 1rem; /* 16px, carte du carrousel */
+  --radius-topanime: 0.5rem; /* 8px, Top Anime */
+  --radius-badge: 0.5rem; /* 8px, badge "TITRE : NEWS" */
 
   /* --- Familles de polices réutilisables --- a jouter dans le css
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 */
   --font-titre-pop: "Bangers", system-ui, sans-serif; /* Style manga / Impact */
   --font-serif: "Newsreader", Georgia, serif; /* Style éditorial / Élégant */
   --font-sans:
     "Roboto", Helvetica, Arial, sans-serif; /* Style moderne / Très lisible */
+
+  /* Utilitaire : cache visuellement un élément tout en le gardant accessible
+   aux lecteurs d'écran (ex: label de formulaire redondant avec le placeholder) */
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  /* img 
+
+*/
+
+  /* pictogrammes */
+  /* RESEAU SOCIAUX*/
+
+  /* logo 
+
+*/
+
+  /* police */
 }
-
-*/
-
-/* img 
-
-*/
-
-/* pictogrammes */
-/* RESEAU SOCIAUX*/
-
-/* logo 
-
-*/
-
-/* police */
 
 .bangers-regular {
   font-family: "Bangers", system-ui;
@@ -80,3 +107,17 @@ ul {
 .bleu {
   color: var(--couleur-bleu);
 }
+
+.site-main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/*.news-carousel, .top-anime {
+  background-image: url("../zenkaitheme2/assets/images/Background_mobile7.avif");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}*/
